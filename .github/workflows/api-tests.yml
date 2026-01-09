@@ -1,0 +1,30 @@
+name: Brewery API Tests
+
+# When should this run?
+on:
+  push:
+    branches: [ main ]
+
+# What should it do?
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Step 1: Get the code
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    # Step 2: Install Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install
+    
+    # Step 4: Run tests
+    - name: Run API tests
+      run: npm test
