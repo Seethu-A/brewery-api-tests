@@ -1,0 +1,16 @@
+{
+  "name": "brewery-api-tests",
+  "version": "1.0.0",
+  "description": "Automated API test suite for brewery management system",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Seethu",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
